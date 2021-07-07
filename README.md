@@ -68,3 +68,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Search auto complete:
+
+Component user: ligne 7 useSte, quand on search.
+Addresses c'est pour l'ensemble des addresses. User est le parent de search.
+HandleChange c'est pour changer la valeur tapée. HandleSelect c'est pour sélectionner.On commence par updater le state avec setAdress. On crée un objet vide newAdress pour stocker l'adresse quand on selectionne une addresse.
