@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Login.css";
 
 export default function Login({
 	email,
@@ -15,7 +16,7 @@ export default function Login({
 	return (
 		<section className="login">
 			<div className="loginContainer">
-				<label>Username</label>
+				<label>E-mail</label>
 				<input
 					type="text"
 					autoFocus

@@ -5,7 +5,11 @@ import PlacesAutocomplete, {
 } from "react-places-autocomplete";
 import DeleteIcon from "@material-ui/icons/Delete";
 import TextField from "@material-ui/core/TextField";
-import { ListContainer } from "../styles/StyledSearch";
+import {
+	ListContainer,
+	SearchBarContainer,
+	MainContainer,
+} from "../styles/StyledSearch";
 
 function Search({
 	address,
@@ -17,14 +21,14 @@ function Search({
 	handlerRemoveAddressFromList,
 }) {
 	return (
-		<div>
+		<MainContainer>
 			<PlacesAutocomplete
 				value={address}
 				onChange={handleChange}
 				onSelect={handleSelect}
 			>
 				{({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-					<div>
+					<SearchBarContainer>
 						<TextField
 							id="outlined-basic"
 							label="Want to seach a city?"
@@ -47,11 +51,12 @@ function Search({
 								);
 							})}
 						</div>
-					</div>
+					</SearchBarContainer>
 				)}
 			</PlacesAutocomplete>
 			<ul>
 				<ListContainer>
+					<h3>Search History</h3>
 					{addresses.map((address) => (
 						<li>
 							<div>
@@ -66,7 +71,7 @@ function Search({
 					))}
 				</ListContainer>
 			</ul>
-		</div>
+		</MainContainer>
 	);
 }
 

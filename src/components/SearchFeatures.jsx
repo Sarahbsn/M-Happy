@@ -1,9 +1,17 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { geocodeByAddress, getLatLng } from "react-places-autocomplete";
 import Search from "./Search";
 import Map from "./Map";
+import {
+	Header,
+	HeaderLogo,
+	HeaderTitle,
+	LogoWrapper,
+} from "../styles/StyledSearchFeatures";
+import mhappy from "../assets/mhappy.png";
 
-const User = ({ handleLogout }) => {
+const SearchFeatures = ({ handleLogout }) => {
 	const [address, setAddress] = useState("");
 	const [addresses, setAddresses] = useState([]); // to add selected addresses on the list
 
@@ -39,10 +47,18 @@ const User = ({ handleLogout }) => {
 
 	return (
 		<>
-			<div className="hero">
-				<h2>Welcome</h2>
-				<button onClick={handleLogout}>Log out</button>
-			</div>
+			<Header>
+				<LogoWrapper>
+					<Link to="/">
+						<HeaderLogo src={mhappy} alt="logo" />
+					</Link>
+					<HeaderTitle>M'Happy</HeaderTitle>
+				</LogoWrapper>
+
+				<button style={{ width: "7rem" }} onClick={handleLogout}>
+					Log out
+				</button>
+			</Header>
 			<Search
 				address={address}
 				setAddress={setAddress}
@@ -65,6 +81,6 @@ const User = ({ handleLogout }) => {
 	);
 };
 
-export default User;
+export default SearchFeatures;
 
 // We need to create the states in this component but also in Map component

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import fire from "../fire";
 import Login from "./Login";
-import User from "./User";
+import SearchFeatures from "./SearchFeatures";
 // import SearchBar from "./SearchBar";
-import "../styles/LoginFeatures.css";
+// import "../styles/Login.css";
 
 export default function LoginFeatures() {
 	const [user, setUser] = useState("");
@@ -82,9 +82,8 @@ export default function LoginFeatures() {
 
 	return (
 		<div>
-			{/* <SearchBar /> */}
 			{user ? (
-				<User handleLogout={handleLogout} />
+				<SearchFeatures handleLogout={handleLogout} />
 			) : (
 				<Login
 					email={email}
