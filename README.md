@@ -74,7 +74,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## How about this test? Components hierarchy?
 
-Before reading this, I hope you enjoyed this little app :) 
+Before reading this, I hope you enjoyed this little app 😊
 
 Regarding the components hierarchy, you'll find a WelcomePage component, two components related to the login part (LoginFeatures.jsx and Login.jsx), two components related to the cities search, history list and autocomplete (SearchFeatures.jsx and Search.jsx), and one for the Leaflet Map with the markers (Map.jsx).
 
@@ -82,6 +82,16 @@ In the styles folder, you'll find all the files used to style the app. I've inte
 
 ## Difficulties I've encountered ? 
 
-The main difficulty was to do this test while following my fulltime training, I barely had free time to make this app but I am pround of myself :)
-Regarding the features, the bounding map is the missing part. I've tried to do it (you'll find the comments at the end of the Map.jsx component).
+The main difficulty was to do this test while following my fulltime training, I barely had free time to make this app but I am pround of myself 😊
+Regarding the features, the bounding map is the missing part. I've managed to add the markers on the map every time a city is searched and added on the history list. However, I didn't succeed in resizing the map to fit all the markers. I've tried to follow different ways to do it and here are the main points I've understood. 
 
+My thoughts about how to do it:
+
+- We need to define the LatLngBounds or FeatureGroup.
+- Add all the markers to a group.
+- Invoke the fitBounds method of a map object, and pass the markers group as an argument.
+- Recenter the map by redefining the center coordinates.
+
+## Next step
+
+So now, when do I start ? 🙃
