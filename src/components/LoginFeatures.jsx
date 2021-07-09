@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import fire from "../fire";
 import Login from "./Login";
 import SearchFeatures from "./SearchFeatures";
-// import SearchBar from "./SearchBar";
-// import "../styles/Login.css";
 
 export default function LoginFeatures() {
 	const [user, setUser] = useState("");
@@ -65,10 +63,10 @@ export default function LoginFeatures() {
 	};
 
 	const authListener = () => {
-		// to check if user exists
+	
 		fire.auth().onAuthStateChanged((user) => {
 			if (user) {
-				clearInputs(); // we want to clear the inputs everytime we have a user
+				clearInputs(); 
 				setUser(user);
 			} else {
 				setUser("");
@@ -78,7 +76,7 @@ export default function LoginFeatures() {
 
 	useEffect(() => {
 		authListener();
-	}, []);
+	});
 
 	return (
 		<div>

@@ -3,7 +3,7 @@ import LoginFeatures from "./components/LoginFeatures";
 import WelcomePage from "./components/WelcomePage";
 import "./App.css";
 
-function App() {
+export default function App() {
 	return (
 		<div className="App">
 			<Router>
@@ -16,4 +16,3 @@ function App() {
 	);
 }
 
-export default App;

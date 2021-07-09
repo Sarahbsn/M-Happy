@@ -16,6 +16,7 @@ export const HeaderLogo = styled.img`
 export const HeaderTitle = styled.h3`
 	color: white;
 	padding-left: 1rem;
+	font-size: 1.5rem;
 `;
 
 export const LogoWrapper = styled.div`

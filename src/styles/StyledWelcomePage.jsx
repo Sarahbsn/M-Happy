@@ -16,10 +16,12 @@ export const Logo = styled.img`
 
 export const WelcomeTitle = styled.h1`
 	padding-bottom: 3rem;
+	font-size: 2.5rem;
 `;
 
 export const Subtitle = styled.h2`
 	padding: 3rem;
+	font-size: 1.6rem;
 `;
 
 export const Description = styled.p`
@@ -30,4 +32,5 @@ export const Description = styled.p`
 
 export const Button = styled.button`
 	width: 15rem;
+	font-size: 1.3rem;
 `;

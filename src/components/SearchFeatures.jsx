@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { geocodeByAddress, getLatLng } from "react-places-autocomplete";
 import Search from "./Search";
@@ -11,16 +11,26 @@ import {
 } from "../styles/StyledSearchFeatures";
 import mhappy from "../assets/mhappy.png";
 
-const SearchFeatures = ({ handleLogout }) => {
+export default function SearchFeatures ({ handleLogout }) {
 	const [address, setAddress] = useState("");
 	const [addresses, setAddresses] = useState([]); // to add selected addresses on the list
+
+const clearInputs = () => {
+		setAddress("");
+	};
 
 	const handleChange = (value) => {
 		setAddress(value);
 	};
 
+
 	const handleSelect = (address) => {
-		setAddress(address);
+		if (addresses) {
+			clearInputs()
+			setAddresses(addresses);
+		} else {
+			setAddresses("")
+		}
 		let newAddress = {};
 		geocodeByAddress(address)
 			.then((results) => {
@@ -80,7 +90,3 @@ const SearchFeatures = ({ handleLogout }) => {
 		</>
 	);
 };
-
-export default SearchFeatures;
-
-// We need to create the states in this component but also in Map component

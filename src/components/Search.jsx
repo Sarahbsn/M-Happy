@@ -1,17 +1,15 @@
-import React from "react";
-import PlacesAutocomplete, {
-	geocodeByAddress,
-	getLatLng,
-} from "react-places-autocomplete";
+import PlacesAutocomplete from "react-places-autocomplete";
 import DeleteIcon from "@material-ui/icons/Delete";
 import TextField from "@material-ui/core/TextField";
 import {
 	ListContainer,
 	SearchBarContainer,
 	MainContainer,
+	ListTitle,
+	ItemWrapper,
 } from "../styles/StyledSearch";
 
-function Search({
+export default function Search({
 	address,
 	setAddress,
 	addresses,
@@ -54,19 +52,19 @@ function Search({
 					</SearchBarContainer>
 				)}
 			</PlacesAutocomplete>
-			<ul>
+			<ul style={{ listStyleType: "none" }}>
+				<ListTitle>Search History</ListTitle>
 				<ListContainer>
-					<h3>Search History</h3>
 					{addresses.map((address) => (
 						<li>
-							<div>
+							<ItemWrapper>
 								{address.formatted_address}
 								<DeleteIcon
 									onClick={(e) =>
 										handlerRemoveAddressFromList(address.place_id)
 									}
 								/>
-							</div>
+							</ItemWrapper>
 						</li>
 					))}
 				</ListContainer>
@@ -74,5 +72,3 @@ function Search({
 		</MainContainer>
 	);
 }
-
-export default Search;

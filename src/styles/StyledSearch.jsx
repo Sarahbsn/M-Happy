@@ -8,18 +8,30 @@ export const MainContainer = styled.div`
 `;
 
 export const ListContainer = styled.div`
-	background-color: #ee6761;
+	border: 1px solid #afafae;
 	overflow: scroll;
 	margin-bottom: 3rem;
-	height: 150px;
-	width: 450px;
+	height: 15rem;
+	width: 35rem;
 	text-align: center;
-	color: white;
-	border-radius: 3rem;
+	border-radius: 1rem;
+	padding: 1rem;
 `;
 
 export const SearchBarContainer = styled.div`
 	padding: 5rem;
 	display: flex;
 	justify-content: center;
+`;
+
+export const ListTitle = styled.h3`
+	color: #ee6761;
+	text-align: center;
+	padding-bottom: 1rem;
+	font-size: 1.4rem;
+`;
+
+export const ItemWrapper = styled.div`
+	display: flex;
+	justify-content: space-between;
 `;

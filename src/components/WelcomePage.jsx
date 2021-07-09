@@ -1,4 +1,3 @@
-import React from "react";
 import mhappy from "../assets/mhappy.png";
 import { Link } from "react-router-dom";
 import {
@@ -10,7 +9,7 @@ import {
 	Button,
 } from "../styles/StyledWelcomePage";
 
-const WelcomePage = () => {
+export default function WelcomePage() {
 	return (
 		<LogoContainer>
 			<WelcomeTitle>Welcome to M'Happy</WelcomeTitle>
@@ -29,4 +28,3 @@ const WelcomePage = () => {
 	);
 };
 
-export default WelcomePage;

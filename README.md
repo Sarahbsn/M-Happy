@@ -2,11 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## First step
 
-In the project directory, you can run:
+run `npm install` to set up all the dependencies needed for the project.
 
-### `npm start`
+## Second step
+
+run `npm start` to lauch the app.
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -69,8 +71,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-Search auto complete:
 
-Component user: ligne 7 useSte, quand on search.
-Addresses c'est pour l'ensemble des addresses. User est le parent de search.
-HandleChange c'est pour changer la valeur tapée. HandleSelect c'est pour sélectionner.On commence par updater le state avec setAdress. On crée un objet vide newAdress pour stocker l'adresse quand on selectionne une addresse.
+## How about this test? Components hierarchy?
+
+Before reading this, I hope you enjoyed this little app :) 
+
+Regarding the components hierarchy, you'll find a WelcomePage component, two components related to the login part (LoginFeatures.jsx and Login.jsx), two components related to the cities search, history list and autocomplete (SearchFeatures.jsx and Search.jsx), and one for the Leaflet Map with the markers (Map.jsx).
+
+In the styles folder, you'll find all the files used to style the app. I've intentionally used CSS and Styled Components just so you know I can work with both.
+
+## Difficulties I've encountered ? 
+
+The main difficulty was to do this test while following my fulltime training, I barely had free time to make this app but I am pround of myself :)
+Regarding the features, the bounding map is the missing part. I've tried to do it (you'll find the comments at the end of the Map.jsx component).
+
